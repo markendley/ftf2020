@@ -1,0 +1,61 @@
+# Cache #
+###################
+wp-content/themes/loom/.codekit-cache
+*.lessc
+*.scssc
+*.codekit
+
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+wp-content/themes/loom/_assets/styles/css/_global.min.css
+wp-content/themes/loom/_assets/scripts/min/_global.min.js
+*.map
+
+
+# Packages #
+###################
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+
+
+# Logs and databases #
+###################
+*.log
+*.sqlite
+error_log
+wp-content/backupwordpress-e3b205c127-backups
+leads.csv
+
+
+
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+GeoIP.dat
+GeoIPv6.dat
