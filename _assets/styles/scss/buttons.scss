@@ -1,0 +1,105 @@
+/* Buttons
+================================================== */
+
+.btn,
+a.btn {
+	border: solid 1px $col-black;
+	@include border-radius(.25em);
+	display: inline-block;
+	text-align: center;
+	font-size: 1.25rem;
+	
+	padding: 0.8rem 1rem;
+	// @media(min-width:$xl-bp) {
+	// 	padding: 0.15em .75em;
+
+
+	// }
+	background-color: $col-black;
+	color: #FFF;
+	-webkit-tap-highlight-color: transparent;
+	text-decoration: none;
+	cursor: pointer;
+	line-height: normal;
+	@include box-sizing(border-box);
+	@include transition(border-color 0.25s, background-color 0.25s, color .25s);
+	@include user-select(none);
+	-webkit-font-smoothing: antialiased;
+
+	font-family:"Gothic821W01-Condensed";
+    font-weight: normal;
+	text-transform: uppercase;
+
+	font-size: .8rem;
+	@media(min-width:$md-bp) {
+		font-size: 1.25rem;
+	}
+
+	&.btn-wide {
+
+		display: block;
+		width: 100%;
+
+		margin: 2em auto;
+		font-size: 1.85rem;
+		padding: .25rem;
+		@media(min-width:$md-bp) {
+			width: 50%;
+
+		}
+	}
+
+	//https://developers.google.com/web/fundamentals/input/touch/activestates/index?hl=en
+	//When the user HOVERS over the button
+	&:hover {
+	}
+	//MOUSE - when the user has used the tab key to tab to this button
+	//TOUCH - it’ll be set to focus after the user has tapped it
+	&:focus {
+		outline: none !important;
+	}
+
+	//iOS will use the :hover as the :focus state, so just use them both.
+	&:hover,
+	&:focus {
+		
+	}
+	//MOUSE - when the user is clicking on it
+	//TOUCH - when the user is touching it
+	&:active {
+	}
+	//fire fox adds an outline to button elements
+	&::-moz-focus-inner {
+		border: 0;
+    }
+
+	&.btn-white {
+		color: $col-black;
+		background-color: #FFF;		
+		border-color: #FFF;
+	}
+	&.btn-fdgrey {
+		color: $col-black;
+		background-color:  $col-fdgrey;		
+		border-color: $col-fdgrey;
+
+	}
+
+	&:focus,
+	&:hover {
+		border: solid 1px $col-red;
+		background: $col-red;
+		color: #FFF;
+	}
+}
+
+
+
+.loadmore-wrap {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	@media(min-width:$md-bp) {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}

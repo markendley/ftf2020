@@ -1,0 +1,19 @@
+
+
+/* Customize select color
+================================================== */
+
+$selectionBkgd: $col-red;
+$selectionText: white;
+
+/* Safari */
+::selection {
+	background: $selectionBkgd;
+	color: $selectionText;
+}
+
+/* Firefox */
+::-moz-selection {
+	background: $selectionBkgd; 
+	color: $selectionText;
+}

@@ -1,0 +1,125 @@
+body {
+	padding-top: 9.1em;
+	@media(min-width:$md-bp) {
+		padding-top: 7.1em;
+	}
+	@media(min-width:$lg-bp) {
+
+	    padding-top: 3.4em;	
+	}
+}
+.search-form-open {
+	@media(max-width:$md-bp - 1) {
+		.main-header {
+			.logo {
+				opacity: 0;
+				pointer-events: none;
+			}
+		}
+	}
+
+}
+.main-header {
+	background: #FFF;
+	border-bottom: solid 1px $col-ltgrey;
+	@include background-size(cover);
+	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	.logo {
+		text-indent: -9999px;
+		height: 5.55rem;
+		width: 11rem;
+		background: url(../../images/Flow-Logo-landscape-notag.svg) no-repeat left center;
+		display: inline-block;
+		margin-left: 1rem;
+		position: relative;
+		z-index: 2;
+		@include transition(.5s);
+	}
+
+	nav {
+		width: 100%;
+		border-top: solid 1px $col-ltgrey;
+		background: #FFF;
+		ul, li {
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			list-style: none;
+		}
+		ul {
+			display: flex;
+			justify-content: space-between;
+		}
+		a {
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $col-black;
+			font-family:"Gothic821W01-Condensed";
+			display: block;
+			padding: .9rem 1rem;
+			font-size: 1.4rem;
+			line-height: 1.2;
+			&:focus,
+			&:hover {
+				color: $col-red;
+			}
+		}
+	}
+
+	@media(min-width:$md-bp) {
+		.logo {
+			height: 4em;
+			width: 14.75em;
+			margin-left: 1rem / 2;
+			background: url(../../images/Flow-Logo-landscape.svg) no-repeat left center;
+
+		}
+		nav {
+			ul {
+				justify-content: center;
+				align-items: center;			
+			}
+			a {
+				padding: .6em 1.45em;
+
+			}
+		}
+	} 
+	@media(min-width:$lg-bp) {
+		display: flex;
+		justify-content: flex-end;
+		nav {
+			width: auto;
+			border: none;
+			background: transparent;
+			margin-right: .3em;
+			display: flex;
+
+			a {
+				padding: 0.6em 0.75em;
+			}
+		}
+		.logo {
+			position: absolute;
+			left: 0;
+			margin-left: 0.45em;
+			height: 100%;
+
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

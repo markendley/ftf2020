@@ -1,0 +1,66 @@
+/* Images
+================================================== */
+
+figure {
+	display: inline-block;
+	margin: 1em 0;	
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	@include user-select(none);
+
+}
+figcaption {
+	background-color: $col-fdgrey;
+	font-style: italic;
+}
+
+
+
+
+
+/* Align
+================================================== */
+
+.wp-caption {
+	display: inline-block;
+	width: auto;
+}
+.wp-caption,
+img {
+
+	.wp-caption-text {
+		text-align: center;	
+	}
+
+	@media (min-width:$md-bp){
+		&.alignleft {
+		    float: left;
+			margin: 0 1em 0 0;	
+		}
+		&.alignright {
+		    float: right;
+			margin: 0 0 0 1em;	
+		}
+		&.aligncenter {
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+	}
+}
+
+
+
+/* Caption
+================================================== */
+
+.wp-caption-text {
+	font-size: .8em;
+	padding: .5em;	
+}
+
+
+

@@ -1,0 +1,119 @@
+/* Mixins
+================================================== */
+@mixin border-radius($radius) {
+	-webkit-border-radius:$radius;
+	-moz-border-radius:$radius;
+	-ms-border-radius:$radius;
+	-o-border-radius:$radius;
+	border-radius:$radius;
+}
+
+@mixin background-size($backgroundsize) {
+	-webkit-background-size:$backgroundsize;
+	-moz-background-size:$backgroundsize;
+	-ms-background-size:$backgroundsize;
+	-o-background-size:$backgroundsize;
+	background-size:$backgroundsize;
+}
+
+@mixin box-sizing($box-sizing) {
+	-webkit-box-sizing:$box-sizing;
+	-moz-box-sizing:$box-sizing;
+	-ms-box-sizing:$box-sizing;
+	-o-box-sizing:$box-sizing;
+	box-sizing:$box-sizing;
+}
+
+
+@mixin box-sizing($box-sizing) {
+	-webkit-box-sizing:$box-sizing;
+	-moz-box-sizing:$box-sizing;
+	-ms-box-sizing:$box-sizing;
+	-o-box-sizing:$box-sizing;
+	box-sizing:$box-sizing;
+}
+
+
+@mixin transition($transition...) {
+	-webkit-transition:$transition;
+	-moz-transition:$transition;
+	-ms-transition:$transition;
+	-o-transition:$transition;
+	transition:$transition;
+}
+
+@mixin transition-delay($transition-delay) {
+	-webkit-transition-delay:$transition-delay;
+	-moz-transition-delay:$transition-delay;
+	-ms-transition-delay:$transition-delay;
+	-o-transition-delay:$transition-delay;
+	transition-delay:$transition-delay;
+}
+
+@mixin transform($transform) {
+	-webkit-transform:$transform;
+	-moz-transform:$transform;
+	-ms-transform:$transform;
+	-o-transform:$transform;
+	transform:$transform;
+}
+
+@mixin transform-origin($transform-origin) {
+	-webkit-transform-origin:$transform-origin;
+	-moz-transform-origin:$transform-origin;
+	-ms-transform-origin:$transform-origin;
+	-o-transform-origin:$transform-origin;
+	transform-origin:$transform-origin;
+}
+
+@mixin transform-origin($transform-origin) {
+	-webkit-transform-origin:$transform-origin;
+	-moz-transform-origin:$transform-origin;
+	-ms-transform-origin:$transform-origin;
+	-o-transform-origin:$transform-origin;
+	transform-origin:$transform-origin;
+}
+
+@mixin box-shadow($box-shadow) {
+	-webkit-box-shadow:$box-shadow;
+	-moz-box-shadow:$box-shadow;
+	-ms-box-shadow:$box-shadow;
+	-o-box-shadow:$box-shadow;
+	box-shadow:$box-shadow;
+}
+
+@mixin text-shadow($text-shadow) {
+	-webkit-text-shadow:$text-shadow;
+	-moz-text-shadow:$text-shadow;
+	-ms-text-shadow:$text-shadow;
+	-o-text-shadow:$text-shadow;
+	text-shadow:$text-shadow;
+}
+
+
+
+//@include box-shadow(7px 7px 5px 0px rgba(50,50,50,0.75));
+
+@mixin user-select($user-select) {
+	-webkit-user-select:$user-select;
+	-moz-user-select:$user-select;
+	-ms-user-select:$user-select;
+	-o-user-select:$user-select;
+	user-select:$user-select;
+}
+
+@mixin appearance($appearance) {
+	-webkit-appearance:$appearance;
+	-moz-appearance:$appearance;
+	-ms-appearance:$appearance;
+	-o-appearance:$appearance;
+	appearance:$appearance;
+}
+
+@mixin filter($filter) {
+	-webkit-filter:$filter;
+	filter:$filter;
+}
+// Ref http://html5-demos.appspot.com/static/css/filters/index.html
+
+

@@ -1,0 +1,281 @@
+$autoSelect: #eee;
+    
+/* Labels
+================================================== */
+
+label,
+legend,
+.label,
+.legend {
+	display: inline-block;
+    font-size: 0.9em;
+    line-height: 1.4em;
+    padding: .3em 1em .3em 0;
+}
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* All fields
+================================================== */
+
+$border-radius:.25em;
+.fieldstyle {
+	outline: 0;
+	box-shadow: none;
+	border: solid 1px $col-black;
+	@include border-radius($border-radius);
+	background-color: #fff;
+
+
+	outline: none;
+	margin: 0;
+	max-width: 320px;
+	display: inline-block;
+	position: relative;
+	@include box-sizing(border-box);
+	@include transition(background-color 0.5s);
+	@include appearance(none);
+
+
+	padding: 0.8rem 1rem;
+
+
+	// padding: 0.4em 1em;
+
+	// @media(min-width:$xl-bp) {
+	// 	padding: 0.15em 1em;
+
+	// }
+
+
+	font-size: .8rem;
+	@media(min-width:$md-bp) {
+		font-size: 1.25rem;
+	}
+
+}
+.fieldstyle:focus {
+	outline: none !important;
+	background-color: #eee;
+}
+
+
+
+
+/* Input & textarea
+================================================== */
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="date"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+
+
+
+textarea {
+	@extend .fieldstyle;
+}
+textarea {
+    resize: vertical;	
+}
+
+
+
+
+
+/* Select
+	
+	Ref: https://select2.org/
+================================================== */
+
+select {
+	@extend .fieldstyle;
+	cursor: pointer;
+	background: url(../../images/select.svg) no-repeat right .5em center;
+	padding-right: 2em;
+	@include background-size(.75em);
+}
+select[multiple]{
+	background-image: none;
+}
+
+// Style _assets/styles/scss/select2/theme/default/_single.scss
+
+
+
+
+
+
+/* Placeholder text
+================================================== */
+
+$placeholdercol: black;
+
+::-webkit-input-placeholder {
+   color: $placeholdercol;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: $placeholdercol;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $placeholdercol;  
+}
+:-ms-input-placeholder {  
+   color: $placeholdercol;  
+}
+
+
+
+
+
+/* Autofill text
+================================================== */
+		
+input:-webkit-autofill, 
+textarea:-webkit-autofill, 
+select:-webkit-autofill {
+	background: transparent !important;
+    -webkit-box-shadow: 0 0 0px 1000px $autoSelect inset;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
+.nf-form-cont {
+	#ninja_forms_required_items, 
+	.nf-field-container {
+		margin-bottom: .75em;
+	}
+}
+
+.nf-form-cont {
+	.form-btn {
+		@extend .btn;
+	}
+}
+
+
+
+/* Search
+================================================== */
+
+.search-form {
+	display: flex;
+	position: absolute;
+	top: 1.2em;
+	right: 1rem;
+	left: 1rem;
+	form {
+		display: flex;
+		width: 100%;
+	}
+	.btn.btn-search {
+		text-indent: -9999px;
+		background: url(../../images/search.svg) no-repeat center center $col-black;
+		width: 3.1rem;
+		&:focus,
+		&:hover {
+			background-color: $col-red;
+		}
+	}
+	.fieldstyle {
+		@include border-radius(.25em 0 0 .25em);
+		display: none;
+		display: inline-block;
+		width: 100%;
+		max-width: none;
+	}
+
+	@media(min-width:$md-bp) {
+		right: 1rem / 2;
+		left: auto;
+		top:0.45em;
+		.fieldstyle {
+			display: inline-block;
+			max-width: 12em;
+
+		}
+		.btn.btn-search {
+			@include border-radius(0 .25em .25em .0);
+		}
+
+	}
+	@media(min-width:$lg-bp) {
+		position: relative;
+		right: 0;
+		top:0;
+		padding: 0.45em;
+		width: 13em;
+
+	}
+}
+
+
+
+.main-header {
+	.search-form {
+		.fieldstyle {
+			opacity: 0;
+			pointer-events: none;
+			font-size: 1.25em;
+		}		
+		.btn.btn-search {
+			@include border-radius(.25em);
+
+		}
+		.show-form {
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		&.search-form-open {
+			pointer-events: auto;
+			.fieldstyle {
+				width: 100%;
+				opacity: 1;
+				pointer-events: auto;
+			}		
+			.btn.btn-search {
+				@include border-radius(0 .25em .25em .0);
+			}
+		}
+		&.search-form-ready {
+			.show-form {
+				display: none;
+
+			}
+		}
+
+	}
+	@media(min-width:$md-bp) {
+		.search-form {
+			.fieldstyle {
+				width: 100%;
+				opacity: 1;
+				pointer-events: auto;
+				font-size: 1em;
+			}		
+			.btn.btn-search {
+				@include border-radius(0 .25em .25em .0);
+			}
+			.show-form {
+				display: none;
+			}
+	
+		}		
+	}
+}

@@ -1,0 +1,74 @@
+
+
+
+
+
+/* TOOLS
+=================================================== */
+@import "mixins";						/* Mixins */
+@import "normalize";					/* Normalize */
+@import "grid";							/* The breakpoints and the base grid */
+
+
+/* LEVEL 1
+=================================================== */
+@import "colors";					/* fonts, colours */
+@import "animations";					/* animation mixins and animations */
+@import "typography";					/* h1-h6, p, blockquotes, tables and ICONS */
+
+
+
+
+/* LEVEL 2
+=================================================== */
+@import "buttons";						/* buttons */
+@import "forms";						/* form elements */
+										// Edit /_assets/styles/scss/select2/theme/default/_single.scss
+
+@import "figures";						/* images */
+@import "video";
+
+
+
+
+
+
+/* LEVEL 3
+• Have a separate scss file for each module or page (or sections)
+• Each scss file should not exceed 1000 lines
+=================================================== */
+
+/* Modules */
+@import "nav";
+@import "header";
+@import "footer";
+
+/* Pages/Sections */
+@import "body";							/* general, elements that are applied everywhere */
+@import "pages";						/* page specific */
+
+
+
+
+/* MISC
+=================================================== */
+
+@import "prompt";						/* Prompts for older browsers */
+@import "print";						/* Print CSS */
+@import "extras";						/* Highlight color */
+
+
+
+
+
+/* Reference
+
+Think ATOMS
+
+http://cssguidelin.es/
+http://patternlab.io/
+http://bradfrost.com/blog/post/atomic-web-design/
+
+=================================================== */
+
+
