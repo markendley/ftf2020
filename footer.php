@@ -61,25 +61,6 @@
 
 
 
-		<script>
-
-
-		var imagePaths = document.querySelectorAll('img[src^="http://media.flowmtbdev.wpengine.com"]')
-
-		for (i = 0; i < imagePaths.length; i++) {
-			var currentUrl = imagePaths[i].getAttribute('src');
-			var newURL = currentUrl.replace('media.flowmtbdev.wpengine.com', 'media.flowmountainbike.com');
-
-			console.log(currentUrl);
-			console.log(newURL);
-
-			imagePaths[i].setAttribute('src', newURL);
-			imagePaths[i].removeAttribute('sizes');
-			imagePaths[i].removeAttribute('srcset');
-		}
-
-
-		</script>
 
 		<?php if(is_single(  )) { ?>
 			<script>
