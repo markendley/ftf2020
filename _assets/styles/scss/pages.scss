@@ -84,16 +84,28 @@
     }
 }
 .fullvideoplay.homepage-topfold {
-    height: calc(100vh - 4em);
+    height: auto;
     padding: 0;
     .homepage-banner-inner {
         max-width: none;
-        height: 100%;
+        height: auto;
     }
     .homepage-banner {
         width: 100%;
         padding: 0;
-        height: 100%;
+        height: auto;
+        padding-bottom: 56.5%;
+        // max-width: 1460px;
+
+        // > * {
+        //     height:auto;
+        //     position: relative;
+        // }
+
+        // @media(max-height:$md-bp) {
+        //     max-width: 960px;
+        // }
+
     }
     .video-link {
         position: absolute;
