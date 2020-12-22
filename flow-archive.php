@@ -147,7 +147,7 @@
 		if($category_name == ''){
 
 			$custom_query_args = array(
-				'posts_per_page' => 60,
+				'posts_per_page' => 48,
 				'post_type' => $posttype,
 				'paged' => $paged,
 				'offset' => $offset,
@@ -160,7 +160,7 @@
 		} else {
 			$custom_query_args = array(
 				'category_name'  => $category_name,
-				'posts_per_page' => 60,
+				'posts_per_page' => 48,
 				'post_type' => $posttype,
 				'paged' => $paged,
 				'offset' => $offset,
@@ -186,11 +186,24 @@
 
 
 					<?php while( $custom_query->have_posts() ) : $custom_query->the_post();?>
-						<?php if ($cc % 20 == 0) { ?>
-							<?php if (function_exists ('adinserter') && $cc) echo adinserter (7); ?>
-						<!--<li class="google-ad-landscape padded border-bottom border-top margin-bottom">
-							<img src="http://placehold.it/728x90?text=Google+Ad" />
-						</li>-->
+						<?php if ($cc == 8) { ?>
+							<?php 
+								if (function_exists ('adinserter') && $cc) 
+								{
+									echo '</ul>';
+									echo adinserter (6);
+									echo '<ul class="archive-tile-style post-container">';
+								}
+							?>
+						<?php } else if($cc == 28) { ?>
+							<?php 
+								if (function_exists ('adinserter') && $cc) 
+								{
+									echo '</ul>';
+									echo adinserter (7);
+									echo '<ul class="archive-tile-style post-container">';
+								}
+							?>
 						<?php } ?>
 						<?php $cc++; ?>
 						<?php include (TEMPLATEPATH . '/_inc/news-tile.php' ); ?>
