@@ -39,6 +39,7 @@ document.getElementById('searchform-field').addEventListener('change', function(
 ------------------------------ */
 
 jQuery('.article-content iframe[src*="youtube"]').wrap('<div class="videowrap"></div>');
+jQuery('.article-content iframe[src*="vimeo"]').wrap('<div class="videowrap"></div>');
 
 
 
