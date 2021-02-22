@@ -670,44 +670,17 @@
 /* SKIN ON 
 ============================ */
 
-.skin-on {
-
-	@media(min-width:$xl-bp) {
-
-
-		.big-and-small {
-			.big-tiles-wrap {
-				width: 100%;
-				.archive-tile-style.big-tiles {
-					padding: 1rem;
-				}
-			}
-			.small-tiles-wrap {
-				width: 100%;
-				overflow: visible;
-				.archive-tile-style.small-tiles {
-					> li {
-						width: 50%;
-						padding-left: 0;
-						height: auto;
-						padding: 1rem;
-						margin-bottom: 0;
-					}
-					.heading {
-						padding: 0.8em 0 1.5em 0;					
-					}
-					.image-wrap {
-						width: 100%;
-						position: relative;
-		
-					}
-				}
-			}
-		
-		}
+@media(min-width:$xl-bp) {
+	.inskinLoaded .big-and-small-style2 .small-tiles-wrap .archive-tile-style.small-tiles > li {
+		width: 100%;
 	}
-
-
+}
+@media(min-width:$xxl-bp) {
+	.inskinLoaded .big-and-small-style2 .small-tiles-wrap .archive-tile-style.small-tiles > li:nth-child(10),
+	.inskinLoaded .big-and-small-style2 .small-tiles-wrap .archive-tile-style.small-tiles > li:nth-child(11),
+	.inskinLoaded .big-and-small-style2 .small-tiles-wrap .archive-tile-style.small-tiles > li:nth-child(12){
+		display: none;
+	}
 }
 
 
