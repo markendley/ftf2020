@@ -51,7 +51,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 		<meta name="msapplication-tap-highlight" content="no">
 
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=1" type="text/css" />
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 
 		<?php wp_head(); ?>
