@@ -60,7 +60,32 @@
 		</script>
 
 
+		<script>
+		// Array.prototype.map.call(document.querySelectorAll('img'), function(img) {
+		// 	img.src = img.src.replace('media.flowmtbstage.wpengine.com', 'media.flowmountainbike.com');
+		// });
 
+		
+
+		
+
+		</script>
+
+
+			<?php if(get_field('homepage_advertisements_setting', 'option') == "Display full takeover"){ ?>	
+				<script>
+					window.addEventListener('load', function(){
+						window.addEventListener('scroll', function(){
+							var thevalue = (100/window.innerHeight) * (window.pageYOffset)/100;
+							document.getElementById('fulltakeover').style.opacity = 1 - thevalue;
+						})
+
+					});
+				</script>
+
+
+
+			<?php } ?>
 
 		<?php if(is_single(  )) { ?>
 			<script>
@@ -159,6 +184,8 @@
 		</script>		
 
 		<?php } ?>
+
+
 
 		<noscript>
 			<span class="warning nojs-warn">

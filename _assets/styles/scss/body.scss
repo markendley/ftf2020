@@ -667,21 +667,6 @@
 	}
 }
 
-/* SKIN ON 
-============================ */
-
-@media(min-width:$xl-bp) {
-	.inskinLoaded .big-and-small-style2 .small-tiles-wrap .archive-tile-style.small-tiles > li {
-		width: 100%;
-	}
-}
-@media(min-width:$xxl-bp) {
-	.inskinLoaded .big-and-small-style2 .small-tiles-wrap .archive-tile-style.small-tiles > li:nth-child(10),
-	.inskinLoaded .big-and-small-style2 .small-tiles-wrap .archive-tile-style.small-tiles > li:nth-child(11),
-	.inskinLoaded .big-and-small-style2 .small-tiles-wrap .archive-tile-style.small-tiles > li:nth-child(12){
-		display: none;
-	}
-}
 
 
 
