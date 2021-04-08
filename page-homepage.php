@@ -14,12 +14,12 @@
 
 	<?php if(get_field('homepage_advertisements_setting') == "Display full takeover"){ ?>	
 		<div class="fulltakeover" id="fulltakeover" >
-			<div class="desktop" style="background-image:url(<?php echo get_field('full_takeover')['full_screen']['url']; ?>)" >
+			<div class="desktop" style="background-image:url(<?php echo get_field('full_takeover', 'option')['full_screen']['url']; ?>)" >
 
 			</div>
-			<div class="tablet" style="background-image:url(<?php echo get_field('full_takeover')['full_screen_tablet']['url']; ?>)" >
+			<div class="tablet" style="background-image:url(<?php echo get_field('full_takeover', 'option')['full_screen_tablet']['url']; ?>)" >
 			</div>
-			<div class="mobile" style="background-image:url(<?php echo get_field('full_takeover')['full_screen_mobile']['url']; ?>)" >
+			<div class="mobile" style="background-image:url(<?php echo get_field('full_takeover', 'option')['full_screen_mobile']['url']; ?>)" >
 			</div>
 			<a href="<?php echo get_field('polite_takeover')['link']; ?>" class="fulltakeover_link" target="_blank"></a>
 			<a href="#main" class="scroll_down scrollto">
@@ -225,12 +225,9 @@
 			$posttype = "post";
 
 			$custom_query_args = array(
-				'category_name'  => $category_name, 
+				'post_type'  => 'feature',	
 				'posts_per_page' => 4,
-				'post_type' => $posttype,
 				'offset' => 4,
-				'post_status' => 'publish',
-				'ignore_sticky_posts' => true,
 				'order' => 'DESC', // 'ASC'
 				'orderby' => 'date' // modified | title | name | ID | rand
 			);
