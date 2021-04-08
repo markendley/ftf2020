@@ -51,11 +51,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 		<meta name="msapplication-tap-highlight" content="no">
 
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=1" type="text/css" />
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=<?php
+$date = new DateTime();
+echo $date->getTimestamp();
+?>" type="text/css" />
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 
 		<?php wp_head(); ?>
-
 		<?php // http://realfavicongenerator.net ?>
 		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(  ); ?>/favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(  ); ?>/favicons/favicon-32x32.png" sizes="32x32">
@@ -72,13 +74,22 @@
 
 	</head>
 	<?php 
+
+
+
 		if($post){
 			$post_slug = "  fadein page-id-".$post->post_name;			
 		}else {
-			$post_slug = ' fadein ';
+			$post_slug = '   fadein ';
 		}
-	?>
-	<body <?php body_class($post_slug); ?>>
+
+
+
+?>
+	<body <?php body_class($post_slug); ?> <?php 
+	if(get_field('polite_takeover')['background_color']){  ?>
+		style="background-color: <?php echo get_field('polite_takeover')['background_color']; ?>"
+	<?php } ?>>
 		<!-- Hotjar Tracking Code for https://flowmountainbike.com/ -->
 			<script>
 			(function(h,o,t,j,a,r){

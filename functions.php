@@ -151,8 +151,8 @@ function feeltheflow_scripts() {
 
 
 
-	wp_register_script('global', get_template_directory_uri().'/_assets/scripts/min/_global.min.js', array('jquery'), '2', true);
-	wp_enqueue_script('global', get_template_directory_uri().'/_assets/scripts/min/_global.min.js', array('jquery'), '2', true);
+	wp_register_script('global', get_template_directory_uri().'/_assets/scripts/min/_global.min.js', array('jquery'), '3', true);
+	wp_enqueue_script('global', get_template_directory_uri().'/_assets/scripts/min/_global.min.js', array('jquery'), '3', true);
 
 
 

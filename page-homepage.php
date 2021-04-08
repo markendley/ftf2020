@@ -1,32 +1,42 @@
 <?php get_header(); ?>
 
-	<?php if(get_field('homepage_advertisements_setting', 'option') == "Display polite takeover"){ 
+	<?php if(get_field('homepage_advertisements_setting') == "Display polite takeover"){ 
 		
 		?>
-		<a href="<?php echo get_field('polite_takeover', 'option')['link']; ?>" class="politetakeover" target="_blank">
-			<div class="desktop" style="background-image:url(<?php echo get_field('polite_takeover', 'option')['top']['url']; ?>)" ></div>
-			<div class="tablet"><img src="<?php echo get_field('polite_takeover', 'option')['top_tablet']['url']; ?>" /></div>
-			<div class="mobile"><img src="<?php echo get_field('polite_takeover', 'option')['top_mobile']['url']; ?>" /></div>
+		<a href="<?php echo get_field('polite_takeover')['link']; ?>" class="politetakeover" target="_blank">
+			<div class="desktop" style="background-image:url(<?php echo get_field('polite_takeover')['top']['url']; ?>)" ></div>
+			<div class="tablet"><img src="<?php echo get_field('polite_takeover')['top_tablet']['url']; ?>" /></div>
+			<div class="mobile"><img src="<?php echo get_field('polite_takeover')['top_mobile']['url']; ?>" /></div>
 		</a>
 		<div class="politetakeover-above">
 	<?php } ?>
 
 
-	<?php if(get_field('homepage_advertisements_setting', 'option') == "Display full takeover"){ ?>	
-		<a href="<?php echo get_field('polite_takeover', 'option')['link']; ?>" class="fulltakeover" target="_blank">
-			<div class="desktop" style="background-image:url(<?php echo get_field('full_takeover', 'option')['full_screen']['url']; ?>)" ></div>
-			<div class="tablet" style="background-image:url(<?php echo get_field('full_takeover', 'option')['full_screen_tablet']['url']; ?>)" ></div>
-			<div class="mobile" style="background-image:url(<?php echo get_field('full_takeover', 'option')['full_screen_mobile']['url']; ?>)" ></div>
-		</a>
+	<?php if(get_field('homepage_advertisements_setting') == "Display full takeover"){ ?>	
+		<div class="fulltakeover" id="fulltakeover" >
+			<div class="desktop" style="background-image:url(<?php echo get_field('full_takeover')['full_screen']['url']; ?>)" >
+
+			</div>
+			<div class="tablet" style="background-image:url(<?php echo get_field('full_takeover')['full_screen_tablet']['url']; ?>)" >
+			</div>
+			<div class="mobile" style="background-image:url(<?php echo get_field('full_takeover')['full_screen_mobile']['url']; ?>)" >
+			</div>
+			<a href="<?php echo get_field('polite_takeover')['link']; ?>" class="fulltakeover_link" target="_blank"></a>
+			<a href="#main" class="scroll_down scrollto">
+			
+
+			</a>
+
+		</div>
 		<div class="fulltakeover-spacer">
 		</div>
-		<div class="fulltakeover-above">
+		<div class="fulltakeover-above" id="main">
 	<?php } ?>
 
 
 
 
-	<?php if(get_field('homepage_advertisements_setting', 'option') != "Display full takeover"){ ?>	
+	<?php if(get_field('homepage_advertisements_setting') != "Display full takeover"){ ?>	
 
 		<section class="homepage-topfold  <?php if(get_field('video_full_screen_mode')){ echo ' fullvideoplay '; }?> " >
 
@@ -115,9 +125,10 @@
 			<?php
 
 			$args = array(
-				'category_name'  => $category_name, 
 				'posts_per_page' => 1,
-				'post_type' => $posttype,
+				'post_type'  => 'feature',
+
+
 			);
 			$custom_posts = new WP_Query($args);
 
@@ -160,10 +171,9 @@
 			<?php
 
 				$args = array(
-					'category_name'  => $category_name, 
+					'post_type'  => 'feature',	
 					'posts_per_page' => 3,
 					'offset' => 1,
-					'post_type' => $posttype,
 
 				);
 				$custom_posts = new WP_Query($args);
@@ -299,15 +309,18 @@
 
 
 		<section class="big-and-small-style2">
-			<h2  class="title homepage-block-title"><a href="<?php echo get_site_url(); ?>/features-all">Flow Features</a></h2>
+			<h2  class="title homepage-block-title"><a href="<?php echo get_site_url(); ?>/features-all">Flow News</a></h2>
 
 			<div class="big-tiles-wrap">
 				<ul class="archive-tile-style big-tiles">
 
 				<?php
 					query_posts( array(
-						'post_type'  => 'feature',
-						'posts_per_page' => 4
+						'category_name'  => $category_name, 
+						'posts_per_page' => 4,
+						'post_type' => $posttype,
+		
+
 					) );
 				?>
 				<?php if (have_posts()) : ?>
@@ -327,7 +340,8 @@
 
 				<?php
 					query_posts( array(
-						'post_type'  => 'feature',
+						'category_name'  => $category_name, 
+						'post_type' => $posttype,
 						'posts_per_page' => 12
 					) );
 				?>
@@ -487,10 +501,10 @@
 			</div>
 		</section>
 
-	<?php if(get_field('homepage_advertisements_setting', 'option') == "Display full takeover"){ ?>	
+	<?php if(get_field('homepage_advertisements_setting') == "Display full takeover"){ ?>	
 		</div>
 	<?php } ?>
-	<?php if(get_field('homepage_advertisements_setting', 'option') == "Display polite takeover"){  ?>
+	<?php if(get_field('homepage_advertisements_setting') == "Display polite takeover"){  ?>
 		</div>
 	<?php } ?>
 

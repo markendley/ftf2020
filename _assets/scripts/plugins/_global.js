@@ -44,6 +44,49 @@ jQuery('.article-content iframe[src*="vimeo"]').wrap('<div class="videowrap"></d
 
 
 
+
+/* scroll to
+------------------------------ */
+
+if(document.querySelectorAll('.scrollto').length > 0){
+
+    document.addEventListener("DOMContentLoaded", function(){
+        var scrollLinks = document.querySelectorAll('.scrollto');
+        
+        
+        
+        for( i = 0; i < scrollLinks.length; i++ ){
+            scrollLinks[i].addEventListener('click', function(event){
+                
+                var link = this.getAttribute('href');
+
+                var offset = document.querySelectorAll('.main-header')[0].offsetHeight;
+
+                var windowVerticalPos = document.querySelectorAll(link)[0].offsetTop;
+                var targetPos = windowVerticalPos - offset;
+                
+                event.preventDefault();
+
+
+
+                jQuery('html, body').animate({
+                    scrollTop: jQuery(link).offset().top - offset
+                }, 500);
+
+
+
+
+
+            });
+                
+        };	
+        
+        
+    });
+}
+
+
+
 /* Scroll event
 ------------------------------ */
 

@@ -24,6 +24,23 @@ html {
     100% 		{opacity: 1;} 
 }
 
+//Bounce
+@-webkit-keyframes bounce { 
+    0%, 50%, 100% 	{-webkit-transform: translateY(0);} 
+    25%, 75%  		{-webkit-transform: translateY(4px);} 
+}
+@-moz-keyframes bounce { 
+    0%, 50%, 100% 	{-moz-transform: translateY(0);} 
+    25%, 75% 		{-moz-transform: translateY(4px);} 
+}
+@-o-keyframes bounce { 
+    0%, 50%, 100% 	{-o-transform: translateY(0);} 
+    25%, 75% 		{-o-transform: translateY(4px);} 
+}
+@keyframes bounce {
+    0%, 50%, 100% 	{transform: translateY(0);} 
+    25%, 75%  		{transform: translateY(4px);} 
+}
 
 
 /* 2. Add it to the class

@@ -72,7 +72,7 @@
 		</script>
 
 
-			<?php if(get_field('homepage_advertisements_setting', 'option') == "Display full takeover"){ ?>	
+			<?php if(get_field('homepage_advertisements_setting') == "Display full takeover"){ ?>	
 				<script>
 					window.addEventListener('load', function(){
 						window.addEventListener('scroll', function(){
