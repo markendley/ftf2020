@@ -19,6 +19,8 @@
 .fulltakeover {
     position: fixed;
     height: 100vh;
+	height: calc(var(--vh) * 100);		
+
     width: 100%;
     top: 0;
     background-color: #000;
