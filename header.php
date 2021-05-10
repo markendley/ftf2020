@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(  ); ?>/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(  ); ?>/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(  ); ?>/favicons/favicon-16x16.png">
+		<link rel="manifest" href="<?php echo get_template_directory_uri(  ); ?>/favicons/site.webmanifest">
+		<link rel="mask-icon" href="<?php echo get_template_directory_uri(  ); ?>/favicons/safari-pinned-tab.svg" color="#000000">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(  ); ?>/favicons/favicon.ico" type="image/x-icon" />
+
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<?php if (is_search()) { ?>
 		   <meta name="robots" content="noindex, nofollow" /> 
@@ -51,19 +60,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 		<meta name="msapplication-tap-highlight" content="no">
 
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=4" type="text/css" />
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=5" type="text/css" />
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 
 		<?php wp_head(); ?>
 		<?php // http://realfavicongenerator.net ?>
-		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(  ); ?>/favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(  ); ?>/favicons/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(  ); ?>/favicons/favicon-16x16.png" sizes="16x16">
-		<link rel="manifest" href="<?php echo get_template_directory_uri(  ); ?>/favicons/manifest.json">
-		<link rel="mask-icon" href="<?php echo get_template_directory_uri(  ); ?>/favicons/safari-pinned-tab.svg">
-		<meta name="theme-color" content="#ffffff">
-		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(  ); ?>/favicons/favicon.ico" type="image/x-icon" />
 		
+
+
+
+
+
+
+
+
+
 
 		<noscript>
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/_assets/styles/css/nojs.css" type="text/css" />
