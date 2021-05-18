@@ -14,12 +14,12 @@
 
 	<?php if(get_field('homepage_advertisements_setting') == "Display full takeover"){ ?>	
 		<div class="fulltakeover" id="fulltakeover" >
-			<div class="desktop" style="background-image:url(<?php echo get_field('full_takeover')['full_screen']['url']; ?>)" >
+			<div class="desktop" style="background-image:url(<?php echo get_field('full_takeover', 'option')['full_screen']['url']; ?>)" >
 
 			</div>
-			<div class="tablet" style="background-image:url(<?php echo get_field('full_takeover')['full_screen_tablet']['url']; ?>)" >
+			<div class="tablet" style="background-image:url(<?php echo get_field('full_takeover', 'option')['full_screen_tablet']['url']; ?>)" >
 			</div>
-			<div class="mobile" style="background-image:url(<?php echo get_field('full_takeover')['full_screen_mobile']['url']; ?>)" >
+			<div class="mobile" style="background-image:url(<?php echo get_field('full_takeover', 'option')['full_screen_mobile']['url']; ?>)" >
 			</div>
 			<a href="<?php echo get_field('polite_takeover')['link']; ?>" class="fulltakeover_link" target="_blank"></a>
 			<a href="#main" class="scroll_down scrollto">
