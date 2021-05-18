@@ -9,7 +9,7 @@
 	?>
 
 	<header class="article-banner" style="background-image:url(<?php echo $featuredimage_url; ?>)">
-		<span class="h1 heading extra-large"><?php the_title(); ?></span>
+		<h1 class="h1 heading extra-large"><?php the_title(); ?></h1>
 	</header>
 
 	<aside class="grey-panel">
