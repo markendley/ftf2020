@@ -151,8 +151,29 @@ function feeltheflow_scripts() {
 
 
 
-	wp_register_script('global', get_template_directory_uri().'/_assets/scripts/min/_global.min.js', array('jquery'), '2', true);
-	wp_enqueue_script('global', get_template_directory_uri().'/_assets/scripts/min/_global.min.js', array('jquery'), '2', true);
+
+	$script = 'global';
+
+	if(is_single(  )){
+		$script = 'single';
+
+	}
+	if(is_page('homepage')){
+		$script = 'home';
+
+	}
+	if(is_page('site-skin')){
+		$script = 'home';
+
+	}
+	if(is_page('takeover')){
+		$script = 'home';
+
+	}
+
+
+	wp_register_script($script, get_template_directory_uri().'/_assets/scripts/min/_'.$script.'.min.js', array('jquery'), '2', true);
+	wp_enqueue_script($script, get_template_directory_uri().'/_assets/scripts/min/_'.$script.'.min.js', array('jquery'), '2', true);
 
 
 

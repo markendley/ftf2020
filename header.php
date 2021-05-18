@@ -60,7 +60,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 		<meta name="msapplication-tap-highlight" content="no">
 
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=5" type="text/css" />
+
+
+		<?php 
+			$stylesheet = 'global';
+
+			if(is_single()){
+				$stylesheet = 'single';
+			}
+		?>
+
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(  ); ?>/_assets/styles/css/_<?php echo $stylesheet; ?>.min.css?v=<?php 
+		
+			echo '6';
+		?>" type="text/css" />
+
+
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 
 		<?php wp_head(); ?>

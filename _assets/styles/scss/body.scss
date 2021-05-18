@@ -842,6 +842,7 @@
 	}
 }
 
+
 /* modal
 ========================================================== */
 
@@ -968,41 +969,6 @@
 	}
 }
 
-/* modal
-========================================================== */
-
-.modal {
-	position: fixed;
-	z-index: 999;
-	background-color: rgba(0,0,0,.9);
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	padding: 2.5em;
-	display: none;
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		top: .5em;
-		right: .5em;
-		width: 2em;
-		height: 2em;
-		background: url(../../images/close.svg) no-repeat center;
-
-		@include background-size(contain);
-	}
-	cursor: pointer;
-	div {
-		@include background-size(contain);
-		height: 100%;
-		width: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		pointer-events: none;
-	}
-}
 
 
 /* ads

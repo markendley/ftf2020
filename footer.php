@@ -72,57 +72,29 @@
 		</script>
 
 
-			<?php if(get_field('homepage_advertisements_setting') == "Display full takeover"){ ?>	
-				<script>
-					window.addEventListener('load', function(){
-						window.addEventListener('scroll', function(){
-							var thevalue = (100/window.innerHeight) * (window.pageYOffset)/100;
-							document.getElementById('fulltakeover').style.opacity = 1 - thevalue;
-						})
-
-					});
-				</script>
-
-
-
-			<?php } ?>
-
 		<?php if(is_single(  )) { ?>
-			<script>
-				jQuery(document).ready(function(){
 
-					jQuery('.modal').on('click', function(){
-						jQuery('.modal').fadeOut();
-						jQuery('.modal div').attr('style', '');
-					});
-				});
 
-				jQuery('.gallery-icon a').each(function(){
-					var childSrc = jQuery(this).find('img').attr('src');
-
-					var newHref = childSrc.substring(0, childSrc.lastIndexOf('-')) + childSrc.substring(childSrc.lastIndexOf('.'));
-
-					jQuery(this).attr('href', newHref);
-
-					jQuery(this).on('click', function(e){
-						e.preventDefault();
-
-						var theHref = jQuery(this).attr('href');
-
-						jQuery('.modal div').attr('style', 'background-image:url(' + theHref + ')');
-
-						jQuery('.modal').fadeIn();
-					});
-
-				});
-
-			</script>
-
-			<div class="modal">
-				<div></div>
-			</div>
+		<div class="modal">
+			<div></div>
+		</div>
 
 		<?php } ?>
+
+
+
+		<?php if(get_field('homepage_advertisements_setting') == "Display full takeover"){ ?>	
+			<script>
+				window.addEventListener('load', function(){
+					window.addEventListener('scroll', function(){
+						var thevalue = (100/window.innerHeight) * (window.pageYOffset)/100;
+						document.getElementById('fulltakeover').style.opacity = 1 - thevalue;
+					})
+
+				});
+			</script>
+		<?php } ?>
+
 
 
 
@@ -157,7 +129,6 @@
 					}
 				});
 				}
-
 				function onPlayerReady(event) {
 					event.target.setVolume(0);
 					event.target.playVideo();
