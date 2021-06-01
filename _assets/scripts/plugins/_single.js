@@ -18,6 +18,29 @@ jQuery('.article-content iframe[src*="vimeo"]').wrap('<div class="videowrap"></d
 
 
 
+/* Full screen image
+------------------------------ */
+
+
+if(document.querySelectorAll('.full-screen').length > 0){
+    window.addEventListener('load', function(){
+
+        var fullscreenimage = document.querySelectorAll('.full-screen');
+
+        for (i = 0; i < fullscreenimage.length; i++) {
+            var container = fullscreenimage[i].parentNode;
+            var imageSrc = fullscreenimage[i].getAttribute('data-src');
+
+            container.setAttribute('style', 'background-image:url('+imageSrc+')');
+            container.classList.add('full-screen-container');
+
+            if(fullscreenimage[i].classList.contains('parralax')){
+                container[i].classList.add('parralax')
+            }
+        }
+    });
+}
+
 
 
 
