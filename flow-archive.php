@@ -144,13 +144,13 @@
 		$offset = ( $current_page - 1 ) * $per_page + $offset_start;
 
 
+
 		if($category_name == ''){
 
 			$custom_query_args = array(
 				'posts_per_page' => 48,
 				'post_type' => $posttype,
 				'paged' => $paged,
-				'offset' => $offset,
 				'post_status' => 'publish',
 				'ignore_sticky_posts' => true,
 				'order' => 'DESC',
@@ -182,7 +182,7 @@
 
 		if ( $custom_query->have_posts() ) :  ?>
 
-			<ul class="archive-tile-style post-container">
+			<ul class="archive-tile-style post-container <?php if($paged == 0){ echo 'first-after-category'; }?>">
 
 
 					<?php while( $custom_query->have_posts() ) : $custom_query->the_post();?>
