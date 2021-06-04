@@ -27,6 +27,16 @@
 	</aside>
 
 
+	<?php if(get_field('show_table_of_contents')) { ?>
+	
+		<nav class="jump-to-section">
+			<h3 class="heading">Jump to section</h3>
+			<ol id="jump-to-section-nav"></ol>
+		</nav>
+
+	<?php } ?>
+
+
 
 	<!--<div class="google-ad-landscape">
 		<img src="http://placehold.it/970x250?text=Google+Ad" />

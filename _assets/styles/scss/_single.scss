@@ -699,10 +699,107 @@ blockquote {
     max-width: none !important;
     padding: 0;
     @include box-sizing(border-box);
-    &.parralax {
+    &.parallax {
         background-attachment: fixed;
     }
     img {
         display: none;
+    }
+}
+
+
+
+
+.jump-to-section {
+    background-color: #F2F2F2;
+    max-width: 70rem;
+    margin-right:auto;
+    margin-left:auto;
+    position: relative;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #F2F2F2;
+        height:0.5rem;
+        z-index: 2;
+    }
+    .heading {
+        color: #FFF;
+        background-color: $col-black;
+        display: block;
+        margin: 0;
+        padding: .75rem 1rem;
+        text-transform: uppercase;
+        font-size: 1.35rem;
+    }
+    ol {
+        margin: 0;
+        padding: 0 1rem;
+        counter-reset: my-sec-counter;
+        padding-bottom: .4rem;
+        li {
+            border:none;
+            border-bottom: solid .5px;
+            position: relative;
+            list-style: none;
+            padding: 0;
+            padding-left: 1.5rem;
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+                 break-inside: avoid;
+            line-height: 1.4;
+            a {
+                width: 100%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+    
+            }
+        
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:before {
+                counter-increment: my-sec-counter;
+                // content: "0" counter(my-sec-counter) ".";
+                content: counters(my-sec-counter, ".", decimal-leading-zero) '.';
+
+                position: absolute;
+                left: 0;
+                font-size: 1.0rem;
+
+            }
+        }
+        a {
+            font-size: 1.0rem;
+            text-decoration: none;
+            color: $col-black;
+            display: block;
+            &:focus,
+            &:hover {
+                color: $col-red;
+            }
+        }
+    }
+    @media (min-width:$sm-bp){
+        ol {
+            column-count: 2;
+            column-gap: 2rem;
+
+        }
+
+    }
+    @media (min-width:$md-bp){
+        ol {
+            column-count: 3;
+        }
     }
 }
